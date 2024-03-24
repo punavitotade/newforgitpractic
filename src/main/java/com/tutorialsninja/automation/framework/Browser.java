@@ -15,6 +15,8 @@ import com.tutorialsninja.automation.base.Base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser {
+	
+	     WebDriver driver;
 	public static Logger log = Logger.getLogger(Browser.class);
 
 	public static WebDriver startBrowser() {
@@ -52,6 +54,12 @@ public class Browser {
 			return Base.driver;
 		}
 
+	}
+	
+	
+	public static void OpenApplicationURL() {
+		
+		Base.driver.get(Base.reader.getUrl());
 	}
 
 	public static void maximize() {
